@@ -3,9 +3,10 @@
 
 /* START OF COMPILED CODE */
 
-import Bunny_Prefab from "../Prefab/Bunny_Prefab.js";
-import Rolly_Prefab from "../Prefab/Rolly_Prefab.js";
 import Protal_Prefab from "../Prefab/Protal_Prefab.js";
+import Rolly_Prefab from "../Prefab/Rolly_Prefab.js";
+import Bunny_Prefab from "../Prefab/Bunny_Prefab.js";
+import Generator_Prefab from "./Generator_Prefab.js";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -103,47 +104,80 @@ export default class Level extends Phaser.Scene {
 		bgParallex.blendMode = Phaser.BlendModes.SKIP_CHECK;
 
 		// bG1
-		const bG1 = this.add.tileSprite(188, 300, 1570, 500, "BG1");
-		bG1.tintTopLeft = 13986153;
-		bG1.tintBottomLeft = 0;
-		bG1.tintBottomRight = 0;
+		const bG1 = this.add.tileSprite(142, 334, 1570, 500, "BG1");
+		bG1.tintTopLeft = 4587274;
+		bG1.tintTopRight = 4587274;
+		bG1.tintBottomLeft = 11730944;
+		bG1.tintBottomRight = 11730944;
 		bgParallex.add(bG1);
 
 		// bG2
-		const bG2 = this.add.tileSprite(188, 300, 1570, 500, "BG2");
+		const bG2 = this.add.tileSprite(142, 334, 1570, 500, "BG2");
+		bG2.tintTopLeft = 4587274;
+		bG2.tintTopRight = 4587274;
+		bG2.tintBottomLeft = 11730944;
+		bG2.tintBottomRight = 11730944;
 		bgParallex.add(bG2);
 
 		// bG3
-		const bG3 = this.add.tileSprite(188, 300, 1570, 500, "BG3");
+		const bG3 = this.add.tileSprite(142, 334, 1570, 500, "BG3");
+		bG3.tintTopLeft = 4587274;
+		bG3.tintTopRight = 4587274;
+		bG3.tintBottomLeft = 11730944;
+		bG3.tintBottomRight = 11730944;
 		bgParallex.add(bG3);
 
 		// bG4
-		const bG4 = this.add.tileSprite(188, 300, 1570, 500, "BG4");
+		const bG4 = this.add.tileSprite(142, 334, 1570, 500, "BG4");
+		bG4.tintTopLeft = 4587274;
+		bG4.tintTopRight = 4587274;
+		bG4.tintBottomLeft = 11730944;
+		bG4.tintBottomRight = 11730944;
 		bgParallex.add(bG4);
 
 		// bG5
-		const bG5 = this.add.tileSprite(188, 300, 1570, 500, "BG5");
+		const bG5 = this.add.tileSprite(142, 334, 1570, 500, "BG5");
+		bG5.tintTopLeft = 4587274;
+		bG5.tintTopRight = 4587274;
+		bG5.tintBottomLeft = 11730944;
+		bG5.tintBottomRight = 11730944;
 		bgParallex.add(bG5);
 
 		// bG6
-		const bG6 = this.add.tileSprite(188, 300, 1570, 500, "BG6");
+		const bG6 = this.add.tileSprite(142, 334, 1570, 500, "BG6");
+		bG6.tintTopLeft = 4587274;
+		bG6.tintTopRight = 4587274;
+		bG6.tintBottomLeft = 11730944;
+		bG6.tintBottomRight = 11730944;
 		bgParallex.add(bG6);
 
 		// bG7
-		const bG7 = this.add.tileSprite(188, 300, 1570, 500, "BG7");
+		const bG7 = this.add.tileSprite(142, 334, 1570, 500, "BG7");
+		bG7.tintTopLeft = 4587274;
+		bG7.tintTopRight = 4587274;
+		bG7.tintBottomLeft = 11730944;
+		bG7.tintBottomRight = 11730944;
 		bgParallex.add(bG7);
 
-		// ui
-		const ui = this.add.layer();
-		ui.blendMode = Phaser.BlendModes.SKIP_CHECK;
+		// protal
+		const protal = new Protal_Prefab(this, 1730, 479);
+		this.add.existing(protal);
+
+		// enemy_Container
+		const enemy_Container = this.add.container(0, 0);
+		enemy_Container.blendMode = Phaser.BlendModes.SKIP_CHECK;
+
+		// roller0
+		const roller0 = new Rolly_Prefab(this, 1001, 231);
+		enemy_Container.add(roller0);
 
 		// bunny
 		const bunny = new Bunny_Prefab(this, 180, 401);
 		this.add.existing(bunny);
 
-		// roller0
-		const roller0 = new Rolly_Prefab(this, 1001, 231);
-		this.add.existing(roller0);
+		// generator0
+		const generator0 = new Generator_Prefab(this, 1624, 279);
+		this.add.existing(generator0);
 
 		// boxContainer
 		const boxContainer = this.add.container(0, 0);
@@ -153,14 +187,25 @@ export default class Level extends Phaser.Scene {
 		const box_1 = this.physics.add.image(642, 476, "Box_1");
 		box_1.scaleX = 0.9;
 		box_1.scaleY = 0.9;
-		box_1.body.maxVelocity.x = 10;
+		box_1.body.maxVelocity.x = 1;
 		box_1.body.maxVelocity.y = 200;
 		box_1.body.drag.x = 100;
-		box_1.body.friction.x = 1000;
-		box_1.body.mass = 10;
+		box_1.body.friction.x = 0;
 		box_1.body.allowRotation = false;
 		box_1.body.setSize(64, 64, false);
 		boxContainer.add(box_1);
+
+		// box_2
+		const box_2 = this.physics.add.image(1452, 481, "Box_1");
+		box_2.scaleX = 0.9;
+		box_2.scaleY = 0.9;
+		box_2.body.maxVelocity.x = 1;
+		box_2.body.maxVelocity.y = 200;
+		box_2.body.drag.x = 100;
+		box_2.body.friction.x = 0;
+		box_2.body.allowRotation = false;
+		box_2.body.setSize(64, 64, false);
+		boxContainer.add(box_2);
 
 		// mainLayer
 		const mainLayer = levelMap.createLayer("mainLayer", ["grass tileset"], 0, 0);
@@ -170,14 +215,26 @@ export default class Level extends Phaser.Scene {
 		collisionLayer.blendMode = Phaser.BlendModes.OVERLAY;
 		collisionLayer.visible = false;
 
-		// protal
-		const protal = new Protal_Prefab(this, 1730, 479);
-		this.add.existing(protal);
+		// ui
+		const ui = this.add.layer();
+		ui.blendMode = Phaser.BlendModes.SKIP_CHECK;
+
+		// tut_txt
+		const tut_txt = this.add.text(128, 268, "", {});
+		tut_txt.text = "'A' And 'D' to \nMove Left Right\n\n'Spacebar' to Jump";
+		tut_txt.setStyle({  });
+		ui.add(tut_txt);
+
+		// tut_txt_1
+		const tut_txt_1 = this.add.text(436, 384, "", {});
+		tut_txt_1.text = "You can push the box\nTry IT!!!";
+		tut_txt_1.setStyle({  });
+		ui.add(tut_txt_1);
 
 		// lists
 		const food = [];
 		const enemy_Roller = [roller0];
-		const box = [box_1];
+		const box = [box_1, box_2];
 
 		// bunnyVsPlatform
 		this.physics.add.collider(bunny, collisionLayer);
@@ -191,6 +248,12 @@ export default class Level extends Phaser.Scene {
 		// BunnyVsBox
 		this.physics.add.collider(bunny, box);
 
+		// BunnyVsGenerator
+		this.physics.add.overlap(bunny, generator0, this.collectedGenerator, undefined, this);
+
+		// BunnyVsProtal
+		this.physics.add.overlap(bunny, protal, this.loadNextScene);
+
 		this.bG1 = bG1;
 		this.bG2 = bG2;
 		this.bG3 = bG3;
@@ -198,13 +261,15 @@ export default class Level extends Phaser.Scene {
 		this.bG5 = bG5;
 		this.bG6 = bG6;
 		this.bG7 = bG7;
-		this.bunny = bunny;
+		this.protal = protal;
 		this.roller0 = roller0;
+		this.bunny = bunny;
+		this.generator0 = generator0;
 		this.box_1 = box_1;
+		this.box_2 = box_2;
 		this.boxContainer = boxContainer;
 		this.mainLayer = mainLayer;
 		this.collisionLayer = collisionLayer;
-		this.protal = protal;
 		this.upKey = upKey;
 		this.downKey = downKey;
 		this.leftKey = leftKey;
@@ -232,20 +297,24 @@ export default class Level extends Phaser.Scene {
 	bG6;
 	/** @type {Phaser.GameObjects.TileSprite} */
 	bG7;
-	/** @type {Bunny_Prefab} */
-	bunny;
+	/** @type {Protal_Prefab} */
+	protal;
 	/** @type {Rolly_Prefab} */
 	roller0;
+	/** @type {Bunny_Prefab} */
+	bunny;
+	/** @type {Generator_Prefab} */
+	generator0;
 	/** @type {Phaser.Physics.Arcade.Image} */
 	box_1;
+	/** @type {Phaser.Physics.Arcade.Image} */
+	box_2;
 	/** @type {Phaser.GameObjects.Container} */
 	boxContainer;
 	/** @type {Phaser.Tilemaps.TilemapLayer} */
 	mainLayer;
 	/** @type {Phaser.Tilemaps.TilemapLayer} */
 	collisionLayer;
-	/** @type {Protal_Prefab} */
-	protal;
 	/** @type {Phaser.Input.Keyboard.Key} */
 	upKey;
 	/** @type {Phaser.Input.Keyboard.Key} */
@@ -272,15 +341,19 @@ export default class Level extends Phaser.Scene {
 	holdTime = 0; // Time counter for how long the "downKey" is held
 	maxHoldTime = 0.5;
 	canJump = true;
+	canUseProtal = false;
 
 	create() {
 
 		this.editorCreate();
-
 		const worldWidth = 1920;
 		const worldHeight = 600;
 		this.physics.world.setBounds(0, 0, worldWidth, worldHeight);
+
+		//set cameras system
+		this.cameras.main.fadeIn();
     	this.cameras.main.setBounds(0, 0, worldWidth, worldHeight);
+		this.cameras.main.zoomTo(1.5,1);
 		this.cameras.main.startFollow(this.bunny);
 
 		/* Start Set Tile Collision */
@@ -327,17 +400,8 @@ export default class Level extends Phaser.Scene {
 			console.log("Level");
 			this.playProtalAnimation();
 		}
-		if(this.rightKey.isDown){
-			console.log(this.bunny.health);
-			this.bunny.health -= 1;
-			console.log(this.bunny.health);
-		}
 
     	this.jumpLogic(delta); // Call the function to update the hold time
-
-		// if(this.upKey.isDown){
-		// 	this.scene.start("Lv2");
-		// }
 
 	}
 
@@ -352,16 +416,30 @@ export default class Level extends Phaser.Scene {
 		let vel = 200;
 
 		if (this.leftKey.isDown) {
-			this.bunny.body.velocity.x = -vel;
-			this.moveAnimation();
-			this.bunny.flipX = true;
+			if(this.bunny.body.onFloor() && this.bunny.body.touching.left){
+				this.bunny.body.velocity.x = -vel/2;
+				this.bunny.play("push",true);
+				this.bunny.flipX = true;
+			}
+			else{
+				this.bunny.body.velocity.x = -vel;
+				this.moveAnimation();
+				this.bunny.flipX = true;
+			}
+
 			//this.bgParallexControl('Left');
 
 		} else if (this.rightKey.isDown) {
-			this.bunny.body.velocity.x = vel;
-			this.moveAnimation();
-			this.bunny.flipX = false;
-			//this.bgParallexControl('Right');
+			if(this.bunny.body.onFloor() && this.bunny.body.touching.right){
+				this.bunny.body.velocity.x = vel/2;
+				this.bunny.play("push",true);
+				this.bunny.flipX = false;
+			}
+			else{
+				this.bunny.body.velocity.x = vel;
+				this.moveAnimation();
+				this.bunny.flipX = false;
+			}
 
 		} else {
 			this.bunny.body.velocity.x = 0;
@@ -380,6 +458,42 @@ export default class Level extends Phaser.Scene {
 		} else {
 			this.bunny.play("run", true);
 		}
+	}
+
+	// Function to update the hold time when "spaceKey" is pressed
+ 	jumpLogic(delta) {
+    	// Check if the spaceKey is pressed and the bunny can still jump
+    	if (this.spaceKey.isDown && this.holdTime < this.maxHoldTime && this.canJump) {
+    		this.bunny.setVelocityY(-300); // Bunny keeps jumping up
+    	}
+
+    	// If the spaceKey is held and the bunny is in the air, increase the hold time
+    	if (this.spaceKey.isDown && !this.bunny.body.onFloor() && this.canJump) {
+        	if (this.holdTime < this.maxHoldTime) {
+            	// Increase hold time while the spaceKey is held and bunny is in the air
+            	this.holdTime += delta / 1000; // delta is time in seconds
+            	this.bunny.setVelocityY(-300); // Keep the bunny moving up
+    	   	} else {
+            	// Stop jumping if the hold time exceeds maxHoldTime
+            	this.bunny.setVelocityY(50);
+            	this.canJump = false; // Prevent further jumping until on the ground
+        	}
+    	}
+
+		// If the spaceKey is not pressed, stop the jump immediately
+    	if (!this.spaceKey.isDown && !this.bunny.body.onFloor() && this.canJump) {
+    	   	this.bunny.setVelocityY(50); // Stop jumping if the key is released
+        	this.canJump = false; // Prevent further jumping until on the ground
+			return;
+    	}
+
+    	// If the bunny is on the floor, reset hold time and allow jumping again
+   		if (this.bunny.body.onFloor()) {
+   			this.holdTime = 0;
+        	this.canJump = true;
+    	}
+		// Optional: Display the hold time in the console for debugging purposes
+    	console.log('Hold Time: ' + this.holdTime.toFixed(2) + 's');
 	}
 
 	stillAnimation() {
@@ -432,45 +546,19 @@ export default class Level extends Phaser.Scene {
 		});
 	}
 
-	overlap(){
-		console.log('overlap');
+	collectedGenerator(bunny, generator) {
+    	//console.log("HIT GENERETOR");
+   		generator.disableBody();
+    	generator.destroy();
+    	this.canUseProtal = true;
+    	this.playProtalAnimation(); 
 	}
 
-	// Function to update the hold time when "spaceKey" is pressed
- 	jumpLogic(delta) {
-    	// Check if the spaceKey is pressed and the bunny can still jump
-    	if (this.spaceKey.isDown && this.holdTime < this.maxHoldTime && this.canJump) {
-    		this.bunny.setVelocityY(-300); // Bunny keeps jumping up
-    	}
+	loadNextScene(){
+		console.log("Next Level!!");
 
-    	// If the spaceKey is held and the bunny is in the air, increase the hold time
-    	if (this.spaceKey.isDown && !this.bunny.body.onFloor() && this.canJump) {
-        	if (this.holdTime < this.maxHoldTime) {
-            	// Increase hold time while the spaceKey is held and bunny is in the air
-            	this.holdTime += delta / 1000; // delta is time in seconds
-            	this.bunny.setVelocityY(-300); // Keep the bunny moving up
-    	   	} else {
-            	// Stop jumping if the hold time exceeds maxHoldTime
-            	this.bunny.setVelocityY(50);
-            	this.canJump = false; // Prevent further jumping until on the ground
-        	}
-    	}
-
-		// If the spaceKey is not pressed, stop the jump immediately
-    	if (!this.spaceKey.isDown && !this.bunny.body.onFloor() && this.canJump) {
-    	   	this.bunny.setVelocityY(50); // Stop jumping if the key is released
-        	this.canJump = false; // Prevent further jumping until on the ground
-			return;
-    	}
-
-    	// If the bunny is on the floor, reset hold time and allow jumping again
-   		if (this.bunny.body.onFloor()) {
-   			this.holdTime = 0;
-        	this.canJump = true;
-    	}
-		// Optional: Display the hold time in the console for debugging purposes
-    	console.log('Hold Time: ' + this.holdTime.toFixed(2) + 's');
 	}
+
 	/* END-USER-CODE */
 }
 

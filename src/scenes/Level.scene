@@ -2,6 +2,8 @@
     "id": "01aefa93-6044-4159-8358-7e91310aa05f",
     "sceneType": "SCENE",
     "settings": {
+        "snapWidth": 289,
+        "snapHeight": 30,
         "exportClass": true,
         "autoImport": true,
         "importFileExtension": true,
@@ -24,11 +26,12 @@
                     "texture": {
                         "key": "BG1"
                     },
-                    "x": 188,
-                    "y": 300,
-                    "tintTopLeft": "#d56969",
-                    "tintBottomLeft": "#000000",
-                    "tintBottomRight": "#000000",
+                    "x": 142,
+                    "y": 334,
+                    "tintTopLeft": "#45ff0a",
+                    "tintTopRight": "#45ff0a",
+                    "tintBottomLeft": "#b30000",
+                    "tintBottomRight": "#b30000",
                     "width": 1570,
                     "height": 500
                 },
@@ -40,8 +43,12 @@
                     "texture": {
                         "key": "BG2"
                     },
-                    "x": 188,
-                    "y": 300,
+                    "x": 142,
+                    "y": 334,
+                    "tintTopLeft": "#45ff0a",
+                    "tintTopRight": "#45ff0a",
+                    "tintBottomLeft": "#b30000",
+                    "tintBottomRight": "#b30000",
                     "width": 1570,
                     "height": 500
                 },
@@ -53,8 +60,12 @@
                     "texture": {
                         "key": "BG3"
                     },
-                    "x": 188,
-                    "y": 300,
+                    "x": 142,
+                    "y": 334,
+                    "tintTopLeft": "#45ff0a",
+                    "tintTopRight": "#45ff0a",
+                    "tintBottomLeft": "#b30000",
+                    "tintBottomRight": "#b30000",
                     "width": 1570,
                     "height": 500
                 },
@@ -66,8 +77,12 @@
                     "texture": {
                         "key": "BG4"
                     },
-                    "x": 188,
-                    "y": 300,
+                    "x": 142,
+                    "y": 334,
+                    "tintTopLeft": "#45ff0a",
+                    "tintTopRight": "#45ff0a",
+                    "tintBottomLeft": "#b30000",
+                    "tintBottomRight": "#b30000",
                     "width": 1570,
                     "height": 500
                 },
@@ -79,8 +94,12 @@
                     "texture": {
                         "key": "BG5"
                     },
-                    "x": 188,
-                    "y": 300,
+                    "x": 142,
+                    "y": 334,
+                    "tintTopLeft": "#45ff0a",
+                    "tintTopRight": "#45ff0a",
+                    "tintBottomLeft": "#b30000",
+                    "tintBottomRight": "#b30000",
                     "width": 1570,
                     "height": 500
                 },
@@ -92,8 +111,12 @@
                     "texture": {
                         "key": "BG6"
                     },
-                    "x": 188,
-                    "y": 300,
+                    "x": 142,
+                    "y": 334,
+                    "tintTopLeft": "#45ff0a",
+                    "tintTopRight": "#45ff0a",
+                    "tintBottomLeft": "#b30000",
+                    "tintBottomRight": "#b30000",
                     "width": 1570,
                     "height": 500
                 },
@@ -105,18 +128,48 @@
                     "texture": {
                         "key": "BG7"
                     },
-                    "x": 188,
-                    "y": 300,
+                    "x": 142,
+                    "y": 334,
+                    "tintTopLeft": "#45ff0a",
+                    "tintTopRight": "#45ff0a",
+                    "tintBottomLeft": "#b30000",
+                    "tintBottomRight": "#b30000",
                     "width": 1570,
                     "height": 500
                 }
             ]
         },
         {
-            "type": "Layer",
-            "id": "0f308033-9f0d-4678-bf4b-9fa6aa9c9bab",
-            "label": "ui",
-            "blendMode": -1
+            "prefabId": "6fdcedd1-5d16-4e58-804b-863406334389",
+            "id": "8e95f222-6196-4af5-aead-4e64d8655fed",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "protal",
+            "scope": "CLASS",
+            "x": 1730,
+            "y": 479
+        },
+        {
+            "type": "Container",
+            "id": "97fa123b-c8bc-45f7-afbe-b3cac1c7c734",
+            "label": "enemy_Container",
+            "blendMode": -1,
+            "list": [
+                {
+                    "prefabId": "878db211-0706-437f-a40a-58068d1b9197",
+                    "id": "0bdc674c-df6a-4477-b449-5bed0915e943",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "roller0",
+                    "scope": "CLASS",
+                    "x": 1001,
+                    "y": 231
+                }
+            ]
         },
         {
             "prefabId": "e01c71b7-6695-4827-93d0-12b39fc499c2",
@@ -131,16 +184,16 @@
             "y": 401
         },
         {
-            "prefabId": "878db211-0706-437f-a40a-58068d1b9197",
-            "id": "0bdc674c-df6a-4477-b449-5bed0915e943",
+            "prefabId": "250886f1-ecad-45e5-9c3f-173ee97dc2a8",
+            "id": "a2350963-81bc-40df-88d4-fc3467e80f8b",
             "unlock": [
                 "x",
                 "y"
             ],
-            "label": "roller0",
+            "label": "generator0",
             "scope": "CLASS",
-            "x": 1001,
-            "y": 231
+            "x": 1624,
+            "y": 279
         },
         {
             "type": "Container",
@@ -161,12 +214,31 @@
                     "y": 476,
                     "scaleX": 0.9,
                     "scaleY": 0.9,
-                    "body.maxVelocity.x": 10,
+                    "body.maxVelocity.x": 1,
                     "body.maxVelocity.y": 200,
-                    "body.friction.x": 1000,
+                    "body.friction.x": 0,
                     "body.drag.x": 100,
                     "allowRotation": false,
-                    "mass": 10,
+                    "body.width": 64,
+                    "body.height": 64
+                },
+                {
+                    "type": "ArcadeImage",
+                    "id": "c826d010-a09f-45cd-aec5-31e3543070da",
+                    "label": "box_2",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "Box_1"
+                    },
+                    "x": 1452,
+                    "y": 481,
+                    "scaleX": 0.9,
+                    "scaleY": 0.9,
+                    "body.maxVelocity.x": 1,
+                    "body.maxVelocity.y": 200,
+                    "body.friction.x": 0,
+                    "body.drag.x": 100,
+                    "allowRotation": false,
                     "body.width": 64,
                     "body.height": 64
                 }
@@ -189,16 +261,28 @@
             "tilemapId": "b57a9c13-6e80-4627-a59e-eec92043ef01"
         },
         {
-            "prefabId": "6fdcedd1-5d16-4e58-804b-863406334389",
-            "id": "8e95f222-6196-4af5-aead-4e64d8655fed",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "protal",
-            "scope": "CLASS",
-            "x": 1730,
-            "y": 479
+            "type": "Layer",
+            "id": "0f308033-9f0d-4678-bf4b-9fa6aa9c9bab",
+            "label": "ui",
+            "blendMode": -1,
+            "list": [
+                {
+                    "type": "Text",
+                    "id": "5574f7bc-4751-4246-945b-8833cd7b28ed",
+                    "label": "tut_txt",
+                    "x": 128,
+                    "y": 268,
+                    "text": "'A' And 'D' to \nMove Left Right\n\n'Spacebar' to Jump"
+                },
+                {
+                    "type": "Text",
+                    "id": "69b8b652-45f6-45fa-b808-64193672a50b",
+                    "label": "tut_txt_1",
+                    "x": 436,
+                    "y": 384,
+                    "text": "You can push the box\nTry IT!!!"
+                }
+            ]
         }
     ],
     "plainObjects": [
@@ -309,6 +393,27 @@
             "scope": "LOCAL",
             "object1": "bunny",
             "object2": "box"
+        },
+        {
+            "id": "74a4d476-e5a1-4c73-817a-b3abdb218853",
+            "type": "Collider",
+            "label": "BunnyVsGenerator",
+            "scope": "LOCAL",
+            "object1": "bunny",
+            "object2": "generator0",
+            "overlapOnly": true,
+            "collideCallback": "this.collectedGenerator",
+            "callbackContext": "this"
+        },
+        {
+            "id": "884f046a-d408-4fc4-8d1d-fbab3a2d84a2",
+            "type": "Collider",
+            "label": "BunnyVsProtal",
+            "scope": "LOCAL",
+            "object1": "bunny",
+            "object2": "protal",
+            "overlapOnly": true,
+            "collideCallback": "this.loadNextScene"
         }
     ],
     "meta": {
@@ -333,7 +438,8 @@
             "id": "a8f99df7-2205-4a33-9fa8-537d98f1012d",
             "label": "box",
             "objectIds": [
-                "e4ca84f1-83e0-465e-a92e-9142bba82726"
+                "e4ca84f1-83e0-465e-a92e-9142bba82726",
+                "c826d010-a09f-45cd-aec5-31e3543070da"
             ]
         }
     ]

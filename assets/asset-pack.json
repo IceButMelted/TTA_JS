@@ -2,37 +2,37 @@
     "section1": {
         "files": [
             {
-                "url": "assets/BG1.png",
+                "url": "assets/BG/BG1.png",
                 "type": "image",
                 "key": "BG1"
             },
             {
-                "url": "assets/BG2.png",
+                "url": "assets/BG/BG2.png",
                 "type": "image",
                 "key": "BG2"
             },
             {
-                "url": "assets/BG3.png",
+                "url": "assets/BG/BG3.png",
                 "type": "image",
                 "key": "BG3"
             },
             {
-                "url": "assets/BG4.png",
+                "url": "assets/BG/BG4.png",
                 "type": "image",
                 "key": "BG4"
             },
             {
-                "url": "assets/BG5.png",
+                "url": "assets/BG/BG5.png",
                 "type": "image",
                 "key": "BG5"
             },
             {
-                "url": "assets/BG6.png",
+                "url": "assets/BG/BG6.png",
                 "type": "image",
                 "key": "BG6"
             },
             {
-                "url": "assets/BG7.png",
+                "url": "assets/BG/BG7.png",
                 "type": "image",
                 "key": "BG7"
             },
@@ -65,6 +65,19 @@
                 "key": "BunnyAni"
             },
             {
+                "url": "assets/BunnyPush x5.png",
+                "frameConfig": {
+                    "frameWidth": 80,
+                    "frameHeight": 100,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "BunnyPush x5"
+            },
+            {
                 "url": "assets/TileSet/collisionsTileset.png",
                 "type": "image",
                 "key": "collisionsTileset"
@@ -75,9 +88,40 @@
                 "type": "image"
             },
             {
+                "url": "assets/item/generator.png",
+                "frameConfig": {
+                    "frameWidth": 80,
+                    "frameHeight": 80,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "generator"
+            },
+            {
+                "url": "assets/Animtion/GeneratorAnim.json",
+                "type": "animation",
+                "key": "GeneratorAnim"
+            },
+            {
                 "url": "assets/TileSet/grass tileset.png",
                 "type": "image",
                 "key": "grass tileset"
+            },
+            {
+                "url": "assets/item/powerUp.png",
+                "frameConfig": {
+                    "frameWidth": 80,
+                    "frameHeight": 80,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "powerUp"
             },
             {
                 "url": "assets/Animtion/ProtalAnim.json",

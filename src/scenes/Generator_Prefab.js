@@ -6,15 +6,18 @@
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
-export default class Protal_Prefab extends Phaser.Physics.Arcade.Sprite {
+export default class Generator_Prefab extends Phaser.Physics.Arcade.Sprite {
 
 	constructor(scene, x, y, texture, frame) {
-		super(scene, x ?? 0, y ?? 0, texture || "teleport inactivated", frame ?? 0);
+		super(scene, x ?? 0, y ?? 0, texture || "generator", frame ?? 0);
 
+		this.scaleX = 0.5;
+		this.scaleY = 0.5;
 		scene.physics.add.existing(this, false);
 		this.body.moves = false;
-		this.body.setOffset(16, 32);
-		this.body.setSize(32, 32, false);
+		this.body.pushable = false;
+		this.body.setSize(80, 80, false);
+		this.play("generator_Anim");
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -24,7 +27,6 @@ export default class Protal_Prefab extends Phaser.Physics.Arcade.Sprite {
 	/* START-USER-CODE */
 
 	// Write your code here.
-
 
 	/* END-USER-CODE */
 }

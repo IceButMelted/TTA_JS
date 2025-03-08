@@ -1,5 +1,5 @@
 {
-    "id": "6fdcedd1-5d16-4e58-804b-863406334389",
+    "id": "250886f1-ecad-45e5-9c3f-173ee97dc2a8",
     "sceneType": "PREFAB",
     "settings": {
         "exportClass": true,
@@ -12,18 +12,21 @@
     "displayList": [
         {
             "type": "ArcadeSprite",
-            "id": "fb184eea-6325-43c7-b4f4-7122848c47e8",
-            "label": "arcadesprite_1",
+            "id": "1a4e7427-d462-4a93-9e9a-a64ea41a7a16",
+            "label": "generator0",
             "scope": "CLASS",
             "texture": {
-                "key": "teleport inactivated",
+                "key": "generator",
                 "frame": 0
             },
+            "scaleX": 0.5,
+            "scaleY": 0.5,
+            "animationPlayMethod": 1,
+            "animationKey": "generator_Anim",
             "moves": false,
-            "body.width": 32,
-            "body.height": 32,
-            "body.offset.x": 16,
-            "body.offset.y": 32
+            "pushable": false,
+            "body.width": 80,
+            "body.height": 80
         }
     ],
     "plainObjects": [],
