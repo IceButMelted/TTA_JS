@@ -1,0 +1,141 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "assets/BG1.png",
+                "type": "image",
+                "key": "BG1"
+            },
+            {
+                "url": "assets/BG2.png",
+                "type": "image",
+                "key": "BG2"
+            },
+            {
+                "url": "assets/BG3.png",
+                "type": "image",
+                "key": "BG3"
+            },
+            {
+                "url": "assets/BG4.png",
+                "type": "image",
+                "key": "BG4"
+            },
+            {
+                "url": "assets/BG5.png",
+                "type": "image",
+                "key": "BG5"
+            },
+            {
+                "url": "assets/BG6.png",
+                "type": "image",
+                "key": "BG6"
+            },
+            {
+                "url": "assets/BG7.png",
+                "type": "image",
+                "key": "BG7"
+            },
+            {
+                "url": "assets/Object/Box/Box_1.png",
+                "type": "image",
+                "key": "Box_1"
+            },
+            {
+                "url": "assets/Object/Box/Box_2.png",
+                "type": "image",
+                "key": "Box_2"
+            },
+            {
+                "url": "assets/BunnyAllFramepng x5.png",
+                "frameConfig": {
+                    "frameWidth": 80,
+                    "frameHeight": 100,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "BunnyAllFramepng x5"
+            },
+            {
+                "url": "assets/Animtion/BunnyAni.json",
+                "type": "animation",
+                "key": "BunnyAni"
+            },
+            {
+                "url": "assets/TileSet/collisionsTileset.png",
+                "type": "image",
+                "key": "collisionsTileset"
+            },
+            {
+                "url": "assets/dino.png",
+                "key": "dino",
+                "type": "image"
+            },
+            {
+                "url": "assets/TileSet/grass tileset.png",
+                "type": "image",
+                "key": "grass tileset"
+            },
+            {
+                "url": "assets/Animtion/ProtalAnim.json",
+                "type": "animation",
+                "key": "ProtalAnim"
+            },
+            {
+                "url": "assets/monster/Roller x5.png",
+                "frameConfig": {
+                    "frameWidth": 240,
+                    "frameHeight": 240,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Roller"
+            },
+            {
+                "url": "assets/Animtion/RollyAni.json",
+                "type": "animation",
+                "key": "RollyAni"
+            },
+            {
+                "url": "assets/Portal/teleport.png",
+                "frameConfig": {
+                    "frameWidth": 64,
+                    "frameHeight": 64,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "teleport"
+            },
+            {
+                "url": "assets/Portal/teleport inactivated.png",
+                "frameConfig": {
+                    "frameWidth": 64,
+                    "frameHeight": 64,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "teleport inactivated"
+            }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false,
+        "visible": true
+    }
+}
