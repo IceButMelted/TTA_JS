@@ -33,7 +33,29 @@ export default class Bunny_Prefab extends Phaser.Physics.Arcade.Sprite {
 	// preUpdate(time, delta) {
 	// 	this.body.gravity.y = 300;
 	// }
+	smashEnemy() {
 
+		this.body.velocity.y = -300;
+		//this.scene.sound.play("enemy-death");
+	}
+	
+	increaseHealth() {
+		this.health++;
+		if (this.health > 3) {
+
+			this.health = 3;
+		}
+	}
+
+	hurt() {
+		this.y -= 50;
+
+		this.body.velocity.y = -400;
+		this.body.velocity.x = this.flipX ? -100 : 100;
+		this.health--;
+		console.log("HP" + this.health);	
+
+	}
 
 	/* END-USER-CODE */
 }
