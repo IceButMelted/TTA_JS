@@ -1,26 +1,599 @@
 {
-  "id": "d12cc1ce-72f6-49c2-8974-818d499c2a3e",
-  "settings": {
-    "compilerOutputLanguage": "JAVA_SCRIPT",
-    "javaScriptInitFieldsInConstructor": false,
-    "javaScriptGenerateFieldDeclarations": true,
-    "exportClass": true,
-    "autoImport": true,
-    "importFileExtension": true,
-    "createMethodName": "editorCreate",
-    "compilerInsertSpaces": false,
-    "compilerTabSize": 4,
-    "borderWidth": 800,
-    "borderHeight": 600,
-    "borderX": 0,
-    "borderY": 0,
-    "sceneKey": "Lv3"
-  },
-  "sceneType": "SCENE",
-  "displayList": [],
-  "meta": {
-    "app": "Phaser Editor 2D - Scene Editor",
-    "url": "https://phasereditor2d.com",
-    "contentType": "phasereditor2d.core.scene.SceneContentType"
-  }
+    "id": "d12cc1ce-72f6-49c2-8974-818d499c2a3e",
+    "sceneType": "SCENE",
+    "settings": {
+        "snapWidth": 80,
+        "snapHeight": 80,
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Lv3"
+    },
+    "displayList": [
+        {
+            "type": "Layer",
+            "id": "cb289f14-b575-47ad-8e33-430008a5c025",
+            "label": "bgParallex",
+            "blendMode": -1,
+            "list": [
+                {
+                    "type": "TileSprite",
+                    "id": "45c42e0d-39a7-4795-a2a0-6b7abd57bdb2",
+                    "label": "bG1",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "BG1"
+                    },
+                    "x": 142,
+                    "y": 334,
+                    "tintTopLeft": "#45ff0a",
+                    "tintTopRight": "#45ff0a",
+                    "tintBottomLeft": "#b30000",
+                    "tintBottomRight": "#b30000",
+                    "width": 1570,
+                    "height": 500
+                },
+                {
+                    "type": "TileSprite",
+                    "id": "844b828b-b327-4a14-be7b-ac81b7ff80aa",
+                    "label": "bG2",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "BG2"
+                    },
+                    "x": 142,
+                    "y": 334,
+                    "tintTopLeft": "#45ff0a",
+                    "tintTopRight": "#45ff0a",
+                    "tintBottomLeft": "#b30000",
+                    "tintBottomRight": "#b30000",
+                    "width": 1570,
+                    "height": 500
+                },
+                {
+                    "type": "TileSprite",
+                    "id": "d52d9da0-9b95-4726-813b-e68b3f1de5fb",
+                    "label": "bG3",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "BG3"
+                    },
+                    "x": 142,
+                    "y": 334,
+                    "tintTopLeft": "#45ff0a",
+                    "tintTopRight": "#45ff0a",
+                    "tintBottomLeft": "#b30000",
+                    "tintBottomRight": "#b30000",
+                    "width": 1570,
+                    "height": 500
+                },
+                {
+                    "type": "TileSprite",
+                    "id": "98a3900c-9794-4e14-bee8-5b2da660a062",
+                    "label": "bG4",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "BG4"
+                    },
+                    "x": 142,
+                    "y": 334,
+                    "tintTopLeft": "#45ff0a",
+                    "tintTopRight": "#45ff0a",
+                    "tintBottomLeft": "#b30000",
+                    "tintBottomRight": "#b30000",
+                    "width": 1570,
+                    "height": 500
+                },
+                {
+                    "type": "TileSprite",
+                    "id": "3cdf9f10-efb3-4a50-8a28-af458eb2f80a",
+                    "label": "bG5",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "BG5"
+                    },
+                    "x": 142,
+                    "y": 334,
+                    "tintTopLeft": "#45ff0a",
+                    "tintTopRight": "#45ff0a",
+                    "tintBottomLeft": "#b30000",
+                    "tintBottomRight": "#b30000",
+                    "width": 1570,
+                    "height": 500
+                },
+                {
+                    "type": "TileSprite",
+                    "id": "adf8fb0a-7284-40c1-9d99-246c2cf845e2",
+                    "label": "bG6",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "BG6"
+                    },
+                    "x": 142,
+                    "y": 334,
+                    "tintTopLeft": "#45ff0a",
+                    "tintTopRight": "#45ff0a",
+                    "tintBottomLeft": "#b30000",
+                    "tintBottomRight": "#b30000",
+                    "width": 1570,
+                    "height": 500
+                },
+                {
+                    "type": "TileSprite",
+                    "id": "ff08515e-8510-4b6d-b666-f8226589dfdc",
+                    "label": "bG7",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "BG7"
+                    },
+                    "x": 142,
+                    "y": 334,
+                    "tintTopLeft": "#45ff0a",
+                    "tintTopRight": "#45ff0a",
+                    "tintBottomLeft": "#b30000",
+                    "tintBottomRight": "#b30000",
+                    "width": 1570,
+                    "height": 500
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "97fa123b-c8bc-45f7-afbe-b3cac1c7c734",
+            "label": "enemy_Container",
+            "blendMode": -1,
+            "list": [
+                {
+                    "prefabId": "878db211-0706-437f-a40a-58068d1b9197",
+                    "id": "0bdc674c-df6a-4477-b449-5bed0915e943",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "roller0",
+                    "scope": "CLASS",
+                    "x": 650,
+                    "y": 409
+                },
+                {
+                    "prefabId": "878db211-0706-437f-a40a-58068d1b9197",
+                    "id": "07667053-be6a-454c-8099-f1f5bcfc2462",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "roller_1",
+                    "scope": "CLASS",
+                    "x": 1336,
+                    "y": 478
+                },
+                {
+                    "prefabId": "878db211-0706-437f-a40a-58068d1b9197",
+                    "id": "32d55020-8c98-43a1-bc6a-0065234993a4",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "roller_2",
+                    "scope": "CLASS",
+                    "x": 1167,
+                    "y": 282
+                },
+                {
+                    "prefabId": "878db211-0706-437f-a40a-58068d1b9197",
+                    "id": "e4a343b0-4398-4212-8ccf-0b83f0af18bf",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "roller_3",
+                    "scope": "CLASS",
+                    "x": 970,
+                    "y": 190
+                },
+                {
+                    "prefabId": "878db211-0706-437f-a40a-58068d1b9197",
+                    "id": "d8723fb2-2b39-4bd2-93d0-a53e5fe82cb8",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "roller_4",
+                    "scope": "CLASS",
+                    "x": 973,
+                    "y": 379
+                }
+            ]
+        },
+        {
+            "prefabId": "6fdcedd1-5d16-4e58-804b-863406334389",
+            "id": "8e95f222-6196-4af5-aead-4e64d8655fed",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "protal",
+            "scope": "CLASS",
+            "x": 1587,
+            "y": 480
+        },
+        {
+            "prefabId": "e01c71b7-6695-4827-93d0-12b39fc499c2",
+            "id": "f83bca29-131e-4353-962b-64f4a4b9c022",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "bunny",
+            "scope": "PUBLIC",
+            "x": 180,
+            "y": 401
+        },
+        {
+            "prefabId": "250886f1-ecad-45e5-9c3f-173ee97dc2a8",
+            "id": "a2350963-81bc-40df-88d4-fc3467e80f8b",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "generator0",
+            "scope": "CLASS",
+            "x": 784,
+            "y": 376
+        },
+        {
+            "type": "Container",
+            "id": "84a37268-bee6-4d4c-a9f7-8d2d6f61b8d3",
+            "label": "boxContainer",
+            "scope": "CLASS",
+            "blendMode": -1,
+            "list": [
+                {
+                    "type": "ArcadeImage",
+                    "id": "e4ca84f1-83e0-465e-a92e-9142bba82726",
+                    "label": "box_1",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "Box_1"
+                    },
+                    "x": 411,
+                    "y": 193,
+                    "scaleX": 0.9,
+                    "scaleY": 0.9,
+                    "body.maxVelocity.x": 1,
+                    "body.maxVelocity.y": 200,
+                    "body.friction.x": 0,
+                    "body.drag.x": 100,
+                    "allowRotation": false,
+                    "body.width": 64,
+                    "body.height": 64
+                },
+                {
+                    "type": "ArcadeImage",
+                    "id": "c826d010-a09f-45cd-aec5-31e3543070da",
+                    "label": "box_2",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "Box_1"
+                    },
+                    "x": 1186,
+                    "y": 473,
+                    "scaleX": 0.9,
+                    "scaleY": 0.9,
+                    "body.maxVelocity.x": 1,
+                    "body.maxVelocity.y": 200,
+                    "body.friction.x": 0,
+                    "body.drag.x": 100,
+                    "allowRotation": false,
+                    "body.width": 64,
+                    "body.height": 64
+                }
+            ]
+        },
+        {
+            "type": "EditableTilemapLayer",
+            "id": "1d4a7ae9-542d-4d55-95fa-5e79f818591b",
+            "label": "mainLayer",
+            "scope": "CLASS",
+            "tilemapId": "b57a9c13-6e80-4627-a59e-eec92043ef01"
+        },
+        {
+            "type": "EditableTilemapLayer",
+            "id": "414e1dc8-d6ab-48e7-b6ba-2cf78aff758b",
+            "label": "collisionLayer",
+            "scope": "CLASS",
+            "blendMode": 4,
+            "visible": false,
+            "tilemapId": "b57a9c13-6e80-4627-a59e-eec92043ef01"
+        },
+        {
+            "type": "Layer",
+            "id": "0f308033-9f0d-4678-bf4b-9fa6aa9c9bab",
+            "label": "ui_static",
+            "blendMode": -1
+        },
+        {
+            "type": "Container",
+            "id": "e59a1f12-888c-4337-8c9c-57c26ac532be",
+            "label": "powerUp_Container",
+            "scope": "CLASS",
+            "blendMode": -1,
+            "list": [
+                {
+                    "prefabId": "134b5692-686d-4fc8-8806-8358a6c25794",
+                    "id": "3315809f-9230-4b42-a909-d9a7c13baead",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "powerUp0",
+                    "scope": "CLASS",
+                    "x": 254,
+                    "y": 171
+                },
+                {
+                    "prefabId": "134b5692-686d-4fc8-8806-8358a6c25794",
+                    "id": "40133bb0-bfcd-44a5-9827-c4defd0e7da3",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "powerUp_1",
+                    "scope": "CLASS",
+                    "x": 841,
+                    "y": 265
+                },
+                {
+                    "prefabId": "134b5692-686d-4fc8-8806-8358a6c25794",
+                    "id": "b96a726a-afcf-4dda-adef-a957d7b9688a",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "powerUp_2",
+                    "scope": "CLASS",
+                    "x": 834,
+                    "y": 377
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "id": "e91d7722-f93e-4794-b3ef-2d137afce1ce",
+            "label": "ui_Overlay",
+            "scope": "CLASS",
+            "blendMode": -1,
+            "list": [
+                {
+                    "type": "Text",
+                    "id": "ccbceaa2-16b1-4c96-85eb-c361342d7f22",
+                    "label": "playerHP",
+                    "scope": "CLASS",
+                    "x": -119,
+                    "y": 567,
+                    "text": "Live Left : 3",
+                    "fontSize": "24px",
+                    "fontStyle": "bold"
+                },
+                {
+                    "type": "Text",
+                    "id": "9c8739c2-aaed-4fd0-bd3c-fa0fd16c620f",
+                    "label": "timerText",
+                    "scope": "CLASS",
+                    "x": 83,
+                    "y": 567,
+                    "text": "Live Left : 3",
+                    "fontSize": "24px",
+                    "fontStyle": "bold"
+                }
+            ]
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "fef13706-5b86-4489-acbe-a2e261396b81",
+            "type": "Keyboard.Key",
+            "label": "upKey",
+            "keyCode": "W"
+        },
+        {
+            "id": "fbebefef-0048-40e7-b088-15ea76ae99a8",
+            "type": "Keyboard.Key",
+            "label": "downKey",
+            "keyCode": "S"
+        },
+        {
+            "id": "59ec8582-1cb1-4c40-8138-65f8545de3ff",
+            "type": "Keyboard.Key",
+            "label": "leftKey",
+            "keyCode": "A"
+        },
+        {
+            "id": "55696d64-dbee-4786-a96d-c46506273c93",
+            "type": "Keyboard.Key",
+            "label": "rightKey",
+            "keyCode": "D"
+        },
+        {
+            "id": "1acaeade-d051-48ec-86f3-fea58286f9a4",
+            "type": "Collider",
+            "label": "BunnyVsPlatform",
+            "scope": "LOCAL",
+            "object1": "bunny",
+            "object2": "collisionLayer"
+        },
+        {
+            "id": "b57a9c13-6e80-4627-a59e-eec92043ef01",
+            "type": "EditableTilemap",
+            "label": "levelMap",
+            "width": 30,
+            "height": 10,
+            "tileWidth": 32,
+            "tileHeight": 32,
+            "tilesets": [
+                {
+                    "name": "collisionsTileset",
+                    "imageKey": "collisionsTileset",
+                    "tileWidth": 32,
+                    "tileHeight": 32,
+                    "tileMargin": 0,
+                    "tileSpacing": 0
+                },
+                {
+                    "name": "grass tileset",
+                    "imageKey": "grass tileset",
+                    "tileWidth": 32,
+                    "tileHeight": 32,
+                    "tileMargin": 0,
+                    "tileSpacing": 0
+                }
+            ],
+            "paintLayerId": "1d4a7ae9-542d-4d55-95fa-5e79f818591b",
+            "paintTileset": "grass tileset",
+            "layers": [
+                {
+                    "name": "mainLayer",
+                    "data": "[33,33,33,33,33,33,125,33,33,33,33,33,125,33,33,33,33,125,33,124,33,33,33,33,33,33,33,33,33,33,125,33,33,33,128,33,33,33,33,33,33,33,33,33,33,127,33,33,33,33,33,33,124,33,33,33,33,124,33,33,33,33,33,33,33,33,33,33,33,33,33,124,33,33,33,33,33,33,33,33,33,33,33,125,33,33,33,33,125,33,33,33,33,33,33,33,33,33,33,128,33,33,33,33,125,33,33,33,33,33,33,33,33,33,33,33,33,33,33,33,33,33,37,46,46,46,46,46,46,46,46,38,33,33,33,33,33,33,37,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,46,38,33,37,46,46,46,46,46,46,46,46,38,33,33,33,33,125,33,33,33,125,33,34,0,0,0,0,0,0,0,0,32,33,33,33,33,33,33,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,33,34,0,0,0,0,0,0,0,0,32,33,33,33,33,33,33,33,33,33,33,34,0,0,0,0,0,0,0,0,45,46,46,46,46,46,46,47,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,33,34,0,0,0,0,0,0,0,0,32,33,33,33,33,33,33,124,33,33,33,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,33,34,0,0,0,0,0,0,0,0,32,33,33,33,33,33,33,33,33,125,33,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,19,24,0,0,0,22,0,0,0,0,0,0,0,32,33,34,0,0,0,0,0,0,0,0,32,33,33,33,33,33,33,33,33,33,33,34,0,0,0,0,0,0,0,0,19,20,21,84,85,0,19,21,0,0,0,0,0,0,0,0,32,34,84,85,86,98,0,0,0,0,0,0,0,32,33,34,0,0,0,0,0,0,0,0,32,33,33,33,33,33,33,125,33,33,33,34,0,0,0,0,0,0,0,0,32,33,34,0,0,0,32,34,0,0,0,0,0,0,0,0,32,34,0,0,0,0,0,0,0,0,0,0,0,32,33,34,0,0,0,0,0,0,0,0,32,33,33,33,33,33,33,33,33,124,33,34,0,0,0,0,0,0,0,0,32,33,34,0,0,0,32,34,0,0,0,0,0,49,20,20,51,34,0,0,0,0,0,22,0,0,0,22,0,32,33,34,0,0,0,0,0,0,0,0,32,33,33,33,33,33,33,33,33,33,33,34,0,0,0,0,0,19,20,20,51,33,34,84,85,0,45,63,35,35,35,35,35,64,46,46,38,34,0,0,0,0,0,98,84,85,86,98,0,32,33,34,0,0,0,0,0,0,0,0,32,33,33,33,33,33,33,33,33,33,124,34,0,0,0,0,0,32,33,33,33,33,34,0,0,0,0,0,0,0,0,0,0,0,0,0,32,34,0,0,0,0,0,0,0,0,0,0,0,45,46,47,0,0,19,20,21,0,0,0,32,33,33,33,33,33,33,33,125,33,33,34,0,0,0,0,0,32,33,33,33,33,34,0,0,0,0,0,0,0,0,0,0,0,0,0,32,34,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,0,32,33,34,0,0,0,32,33,33,33,33,33,33,33,33,125,33,34,0,0,0,0,19,51,33,33,33,33,34,0,0,0,22,0,0,0,0,0,0,0,0,0,32,34,84,85,86,98,0,0,0,0,0,0,0,0,0,0,0,0,32,33,34,0,0,0,32,33,33,33,33,33,33,33,33,33,126,34,0,0,0,0,32,33,33,33,33,33,34,0,85,86,19,20,20,20,20,20,20,20,20,20,51,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,33,34,0,0,0,32,33,33,33,33,33,33,128,33,33,33,34,0,0,0,0,32,33,33,33,33,33,34,0,0,0,32,33,33,33,33,33,33,33,33,33,33,34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,33,34,0,0,0,32,33,33,33,33,33,33,33,33,33,33,50,20,20,20,20,51,33,33,33,33,33,50,20,20,20,51,33,33,33,33,33,33,33,33,33,33,50,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,51,33,50,20,20,20,51,33,33,33,33,33,33,33,33,126,33,33,126,33,125,33,33,33,33,33,126,33,126,33,33,124,33,33,33,125,33,33,33,125,33,33,33,33,127,33,33,124,33,33,33,33,33,33,33,126,33,33,33,33,33,33,33,33,124,33,33,33,33,33,33,124,33,33,124,33,33,124,33,33,33,33,33,33,125,33,33,33,33,126,33,33,33,33,33,124,33,33,33,33,124,33,127,33,125,126,124,33,33,126,33,33,128,128,33,33,33,33,33,33,127,126,33,33,33,33,125,33,125,125,33,33,33,33,33,126,33,33,33,33,33,125,33,33,33,33,125,33,33,33,33,33,33,33,33,126,33,127,33,33,33,33,33,33,33,33,33,33,33,33,33,128,33,33,33,33,126,33,33,33,125,33,33,33,124,33,33,33,33,33,33,33,124,33,33]",
+                    "width": 60,
+                    "height": 20,
+                    "tileWidth": 32,
+                    "tileHeight": 32
+                },
+                {
+                    "name": "collisionLayer",
+                    "data": "[1,2,3,4,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]",
+                    "width": 60,
+                    "height": 20,
+                    "tileWidth": 32,
+                    "tileHeight": 32
+                }
+            ]
+        },
+        {
+            "id": "e492703e-6b5f-4471-93de-feafa2567fdf",
+            "type": "Keyboard.Key",
+            "label": "spaceKey"
+        },
+        {
+            "id": "95ab3218-7fc4-4fa5-b9fc-87cbd3c9c7b9",
+            "type": "Collider",
+            "label": "EnemyVsFloor",
+            "scope": "LOCAL",
+            "object1": "enemy_Roller",
+            "object2": "collisionLayer"
+        },
+        {
+            "id": "fd81dd5e-0554-4fb4-bb26-8643c9b1ed1b",
+            "type": "Collider",
+            "label": "BoxVsFloor",
+            "scope": "LOCAL",
+            "object1": "box",
+            "object2": "collisionLayer"
+        },
+        {
+            "id": "1b409fb5-1909-4dbb-a751-dc5792f4a10a",
+            "type": "Collider",
+            "label": "BunnyVsBox",
+            "scope": "LOCAL",
+            "object1": "bunny",
+            "object2": "box"
+        },
+        {
+            "id": "74a4d476-e5a1-4c73-817a-b3abdb218853",
+            "type": "Collider",
+            "label": "BunnyVsGenerator",
+            "scope": "LOCAL",
+            "object1": "bunny",
+            "object2": "generator0",
+            "overlapOnly": true,
+            "collideCallback": "this.collectedGenerator",
+            "callbackContext": "this"
+        },
+        {
+            "id": "884f046a-d408-4fc4-8d1d-fbab3a2d84a2",
+            "type": "Collider",
+            "label": "BunnyVsProtal",
+            "scope": "LOCAL",
+            "object1": "bunny",
+            "object2": "protal",
+            "overlapOnly": true,
+            "collideCallback": "this.loadNextScene",
+            "callbackContext": "this"
+        },
+        {
+            "id": "2a998dad-bf5d-4f2c-92bf-225795cd9eae",
+            "type": "Keyboard.Key",
+            "label": "pKey",
+            "keyCode": "P"
+        },
+        {
+            "id": "888bab3c-b70d-445c-b3c3-7af19231e277",
+            "type": "Keyboard.Key",
+            "label": "oKey",
+            "keyCode": "O"
+        },
+        {
+            "id": "9daa8db7-2944-46f0-97b4-8c798a1cb10f",
+            "type": "Collider",
+            "label": "BunnyVsPowerUp",
+            "scope": "LOCAL",
+            "object1": "bunny",
+            "object2": "powerUp",
+            "collideCallback": "this.collectedPowerUp",
+            "callbackContext": "this"
+        },
+        {
+            "id": "6280fd1b-d059-4704-a309-3bc34655eafb",
+            "type": "Collider",
+            "label": "BunnyVsEnemy",
+            "object1": "bunny",
+            "object2": "enemy_Roller",
+            "overlapOnly": true,
+            "collideCallback": "this.playerVsEnemies",
+            "callbackContext": "this"
+        },
+        {
+            "id": "d55317b1-fc3b-4f30-8928-c04697686d37",
+            "type": "Keyboard.Key",
+            "label": "iKey",
+            "keyCode": "I"
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    },
+    "lists": [
+        {
+            "id": "583e3040-3b83-4d22-931f-f9887f876b4b",
+            "label": "food"
+        },
+        {
+            "id": "bc3082bb-80b0-4822-bb11-096e3ba37fac",
+            "label": "enemy_Roller",
+            "objectIds": [
+                "0bdc674c-df6a-4477-b449-5bed0915e943"
+            ]
+        },
+        {
+            "id": "a8f99df7-2205-4a33-9fa8-537d98f1012d",
+            "label": "box",
+            "objectIds": [
+                "e4ca84f1-83e0-465e-a92e-9142bba82726",
+                "c826d010-a09f-45cd-aec5-31e3543070da"
+            ]
+        },
+        {
+            "id": "45d3d269-5176-4d55-bf4a-af8d9eb62c5b",
+            "label": "powerUp",
+            "objectIds": [
+                "40133bb0-bfcd-44a5-9827-c4defd0e7da3",
+                "3315809f-9230-4b42-a909-d9a7c13baead"
+            ]
+        }
+    ]
 }

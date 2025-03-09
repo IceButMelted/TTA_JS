@@ -620,7 +620,6 @@ export default class Lv2 extends Phaser.Scene {
 		this.bgParallexFollowingCam(this.diff_Cam);
 		this.prevCamX = scrollX;
     }
-
 		//contol BG to move with camera
 	bgParallexFollowingCam(diffX){
 		this.bG7.x -= diffX;
@@ -632,7 +631,6 @@ export default class Lv2 extends Phaser.Scene {
 		this.bG1.x -= diffX;
 		this.ui_Overlay.x -= diffX;
 	}
-
 	//play Animation Door
 	playProtalAnimation(){
 		//start Animation opeing portal
@@ -678,7 +676,7 @@ export default class Lv2 extends Phaser.Scene {
 		this.cameras.main.fadeOut(1000);
 		protal.disableBody();
 		this.cameras.main.once("camerafadeoutcomplete", () => {
-			this.scene.restart();
+			this.scene.start("Lv3");
 		});
 	}
 
