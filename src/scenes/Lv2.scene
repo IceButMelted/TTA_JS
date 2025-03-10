@@ -210,7 +210,7 @@
                     "texture": {
                         "key": "Box_1"
                     },
-                    "x": 547,
+                    "x": 526,
                     "y": 289,
                     "scaleX": 0.9,
                     "scaleY": 0.9,
@@ -257,6 +257,7 @@
             "label": "collisionLayer",
             "scope": "CLASS",
             "blendMode": 4,
+            "visible": false,
             "tilemapId": "b57a9c13-6e80-4627-a59e-eec92043ef01"
         },
         {

@@ -286,9 +286,9 @@
                     "type": "Text",
                     "id": "257cf73c-472c-4ecf-a19c-35dcac1e5981",
                     "label": "tut_txt_2",
-                    "x": 907,
-                    "y": 165,
-                    "text": "This is Enemy you can jump above \nbut if you hit it you will lose your HP",
+                    "x": 905,
+                    "y": 117,
+                    "text": "This is Enemy you can jump above \nbut if you hit it you will lose your HP\n\nBut you can kill them by jump on it head",
                     "align": "center"
                 },
                 {

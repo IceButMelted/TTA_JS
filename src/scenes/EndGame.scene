@@ -1,0 +1,237 @@
+{
+    "id": "2462aab5-ee4c-47db-b911-01c316e49f71",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "EndGame"
+    },
+    "displayList": [
+        {
+            "type": "TileSprite",
+            "id": "4d79892f-922a-479d-bb33-d69f267bba99",
+            "label": "bG1",
+            "scope": "CLASS",
+            "texture": {
+                "key": "BG1"
+            },
+            "x": 419,
+            "y": 279,
+            "scaleX": 1.5,
+            "scaleY": 1.5,
+            "tintTopLeft": "#ff1a1a",
+            "tintTopRight": "#ff2525",
+            "tintBottomLeft": "#37fe10",
+            "tintBottomRight": "#37fe10",
+            "width": 1570,
+            "height": 500
+        },
+        {
+            "type": "TileSprite",
+            "id": "2ea26fff-18f6-4c50-a01b-141026580265",
+            "label": "bG2",
+            "scope": "CLASS",
+            "texture": {
+                "key": "BG2"
+            },
+            "x": 419,
+            "y": 279,
+            "scaleX": 1.5,
+            "scaleY": 1.5,
+            "width": 1570,
+            "height": 500
+        },
+        {
+            "type": "TileSprite",
+            "id": "501a94a9-86ee-4330-8290-dc5780802ce2",
+            "label": "bG3",
+            "scope": "CLASS",
+            "texture": {
+                "key": "BG3"
+            },
+            "x": 419,
+            "y": 279,
+            "scaleX": 1.5,
+            "scaleY": 1.5,
+            "width": 1570,
+            "height": 500
+        },
+        {
+            "type": "TileSprite",
+            "id": "8304e25c-808f-460d-8099-69e08b432649",
+            "label": "bG4",
+            "scope": "CLASS",
+            "texture": {
+                "key": "BG4"
+            },
+            "x": 419,
+            "y": 279,
+            "scaleX": 1.5,
+            "scaleY": 1.5,
+            "width": 1570,
+            "height": 500
+        },
+        {
+            "type": "TileSprite",
+            "id": "a56af837-749e-4fee-95e3-2b140a217cae",
+            "label": "bG5",
+            "scope": "CLASS",
+            "texture": {
+                "key": "BG5"
+            },
+            "x": 419,
+            "y": 279,
+            "scaleX": 1.5,
+            "scaleY": 1.5,
+            "width": 1570,
+            "height": 500
+        },
+        {
+            "type": "TileSprite",
+            "id": "38c51e92-209d-4498-a5d5-b853a3a991c1",
+            "label": "bG6",
+            "scope": "CLASS",
+            "texture": {
+                "key": "BG6"
+            },
+            "x": 419,
+            "y": 279,
+            "scaleX": 1.5,
+            "scaleY": 1.5,
+            "width": 1570,
+            "height": 500
+        },
+        {
+            "type": "TileSprite",
+            "id": "f2b3d948-737d-43c5-b816-15d133c24dd6",
+            "label": "bG7",
+            "scope": "CLASS",
+            "texture": {
+                "key": "BG7"
+            },
+            "x": 419,
+            "y": 279,
+            "scaleX": 1.5,
+            "scaleY": 1.5,
+            "width": 1570,
+            "height": 500
+        },
+        {
+            "prefabId": "e01c71b7-6695-4827-93d0-12b39fc499c2",
+            "id": "d9af67e9-7a12-4ed7-a68f-1cd3bc2599db",
+            "unlock": [
+                "x",
+                "y",
+                "scaleX",
+                "scaleY",
+                "animationPreview",
+                "animationKey",
+                "animationPlayMethod",
+                "moves",
+                "pushable"
+            ],
+            "label": "bunny_Prefab",
+            "x": 139,
+            "y": 413,
+            "scaleX": 2,
+            "scaleY": 2,
+            "animationPlayMethod": 1,
+            "animationKey": "run",
+            "animationPreview": false,
+            "moves": false,
+            "pushable": false
+        },
+        {
+            "type": "TileSprite",
+            "id": "9429884a-398d-4c99-8785-1ecb7be4fb32",
+            "label": "floor",
+            "scope": "CLASS",
+            "texture": {
+                "key": "Floor"
+            },
+            "x": 400,
+            "y": 561,
+            "scaleX": 1.2,
+            "scaleY": 1.2,
+            "width": 800,
+            "height": 80
+        },
+        {
+            "type": "Text",
+            "id": "5329e6cc-3e3d-4fd6-8f24-26ef2836114e",
+            "label": "text_1",
+            "scope": "CLASS",
+            "x": 193,
+            "y": 121,
+            "text": "THX FOR PLAYING",
+            "fontSize": "6em",
+            "fontStyle": "bold"
+        },
+        {
+            "type": "Text",
+            "id": "caff5870-039e-4c5d-95a3-ebf3c5a6edb7",
+            "label": "text",
+            "scope": "CLASS",
+            "x": 331,
+            "y": 266,
+            "text": "your time run : ",
+            "fontSize": "3em"
+        },
+        {
+            "type": "Text",
+            "id": "4d435beb-6132-4f00-af74-2269d2fa1a0f",
+            "label": "text_2",
+            "scope": "CLASS",
+            "x": 378,
+            "y": 323,
+            "text": "NaN Sec",
+            "align": "center",
+            "fontSize": "4em",
+            "fontStyle": "bold"
+        },
+        {
+            "type": "Text",
+            "id": "3e7cb317-cbd5-4c63-a56a-558d026ba96b",
+            "label": "text_3",
+            "scope": "CLASS",
+            "x": 294,
+            "y": 411,
+            "text": "Press Enter to Back to Title",
+            "fontSize": "2em"
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "4d052319-13a7-4f6c-83ac-f4e473c4c392",
+            "type": "Keyboard.Key",
+            "label": "enterKey",
+            "keyCode": "ENTER"
+        },
+        {
+            "id": "8087947b-5bc7-4dda-9f1c-d1157fac698a",
+            "type": "EditableTilemap",
+            "label": "editabletilemap",
+            "width": 10,
+            "height": 10,
+            "tileWidth": 32,
+            "tileHeight": 32,
+            "tilesets": [],
+            "layers": []
+        },
+        {
+            "id": "720bcf14-3316-48f6-8843-f9b4a331e9d2",
+            "type": "Keyboard.Key",
+            "label": "oKey",
+            "keyCode": "O"
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

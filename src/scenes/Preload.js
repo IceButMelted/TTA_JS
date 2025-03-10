@@ -74,8 +74,13 @@ export default class Preload extends Phaser.Scene {
 	}
 
 	create() {
+		this.sound.play("bgm", { loop: true , volume: 0.25});
 
-		this.scene.start("Level");
+		
+
+		this.scene.start("TitleMenu");
+
+		
 	}
 
 	/* END-USER-CODE */

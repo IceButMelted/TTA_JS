@@ -242,8 +242,8 @@ export default class Level extends Phaser.Scene {
 		ui_static.add(tut_txt_1);
 
 		// tut_txt_2
-		const tut_txt_2 = this.add.text(907, 165, "", {});
-		tut_txt_2.text = "This is Enemy you can jump above \nbut if you hit it you will lose your HP";
+		const tut_txt_2 = this.add.text(905, 117, "", {});
+		tut_txt_2.text = "This is Enemy you can jump above \nbut if you hit it you will lose your HP\n\nBut you can kill them by jump on it head";
 		tut_txt_2.setStyle({ "align": "center" });
 		ui_static.add(tut_txt_2);
 
@@ -422,8 +422,11 @@ export default class Level extends Phaser.Scene {
 	canJump = true;
 	canUseProtal = false;
 	vel = 200;
+	canPlayJumpSound = true;
 
 	create() {
+
+
 
 		this.editorCreate();
 		const worldWidth = 1920;
@@ -437,7 +440,8 @@ export default class Level extends Phaser.Scene {
 		this.cameras.main.startFollow(this.bunny);
 		this.cameras.main.zoomTo(1, 1000);
 
-
+		this.registry.set("Tut", false);
+		this.registry.set("CurrentTimer", 0);
 
 		/* Start Set Tile Collision */
 		//collision with pink tile
@@ -463,6 +467,7 @@ export default class Level extends Phaser.Scene {
 
 		this.playerHP.setText("Live Left : " + this.bunny.health);
 
+		//music
 
 	}
 
@@ -473,8 +478,14 @@ export default class Level extends Phaser.Scene {
 		//----Testing Zone----///
 		if(this.pKey.isDown){
 			// Set an initial global value
-			console.log(this.bunny.health)
-			this.scene.start("Lv2");
+			//console.log(this.bunny.health)
+			this.cameras.main.fadeOut(1000);
+			this.registry.set("Tut", false);
+			//protal.disableBody();
+			this.cameras.main.once("camerafadeoutcomplete", () => {
+				this.scene.start("Lv2");
+			});	
+			console.log( "this is get timer" +this.registry.get("gameScore"));
         	//console.log(this.registry.get("gameScore"));
 			//console.log(this.canUseProtal);
 		}
@@ -482,7 +493,8 @@ export default class Level extends Phaser.Scene {
 			console.log(this.registry.set("gameScore",this.registry.get("gameScore") + 1 ));
 		}
 		if(this.iKey.isDown){	
-			this.reloadScene();
+			console.log(true);
+			console.log(this.registry.get("Tut"));
 		}
 		//--End Testing Zone--///
 
@@ -500,11 +512,6 @@ export default class Level extends Phaser.Scene {
         this.prevCamX = cam.scrollX;
         this.prevCamY = cam.scrollY;
 		/*End Camera System*/
-
-		if(this.downKey.isDown){
-			console.log("Level");
-			this.playProtalAnimation();
-		}
 
     	this.jumpLogic(delta); // Call the function to update the hold time
 
@@ -551,7 +558,6 @@ export default class Level extends Phaser.Scene {
 			this.stillAnimation();
 		}
 	}
-
 	moveAnimation() {
 
 		if (this.bunny.body.velocity.y < 0) {
@@ -564,12 +570,15 @@ export default class Level extends Phaser.Scene {
 			this.bunny.play("run", true);
 		}
 	}
-
 	// Function to update the hold time when "spaceKey" is pressed
  	jumpLogic(delta) {
     	// Check if the spaceKey is pressed and the bunny can still jump
     	if (this.spaceKey.isDown && this.holdTime < this.maxHoldTime && this.canJump) {
     		this.bunny.setVelocityY(-300); // Bunny keeps jumping up
+			if(this.canPlayJumpSound){
+				this.sound.play("jumpSnd");
+				this.canPlayJumpSound = false;
+			}
     	}
 
     	// If the spaceKey is held and the bunny is in the air, increase the hold time
@@ -582,6 +591,7 @@ export default class Level extends Phaser.Scene {
             	// Stop jumping if the hold time exceeds maxHoldTime
             	this.bunny.setVelocityY(50);
             	this.canJump = false; // Prevent further jumping until on the ground
+				this.canPlayJumpSound = true;
         	}
     	}
 
@@ -589,6 +599,8 @@ export default class Level extends Phaser.Scene {
     	if (!this.spaceKey.isDown && !this.bunny.body.onFloor() && this.canJump) {
     	   	this.bunny.setVelocityY(50); // Stop jumping if the key is released
         	this.canJump = false; // Prevent further jumping until on the ground
+			this.canPlayJumpSound = true;
+			this.sound.stopByKey("jumpSnd");
 			return;
     	}
 
@@ -600,7 +612,6 @@ export default class Level extends Phaser.Scene {
 		//Display the hold time in the console for debugging purposes
     	//console.log('Hold Time: ' + this.holdTime.toFixed(2) + 's');
 	}
-
 	stillAnimation() {
 
 		if (this.bunny.body.velocity.y < 0) {
@@ -613,7 +624,6 @@ export default class Level extends Phaser.Scene {
 			this.bunny.play("idle", true);
 		}
 	}
-
 	bgParallexControl(scrollX, scrollY) {
         //logic for parallax effect
 		this.diff_Cam = this.prevCamX - scrollX
@@ -628,7 +638,6 @@ export default class Level extends Phaser.Scene {
 		this.bgParallexFollowingCam(this.diff_Cam);
 		this.prevCamX = scrollX;
     }
-
 		//contol BG to move with camera
 	bgParallexFollowingCam(diffX){
 		this.bG7.x -= diffX;
@@ -640,12 +649,11 @@ export default class Level extends Phaser.Scene {
 		this.bG1.x -= diffX;
 		this.ui_Overlay.x -= diffX;
 	}
-
 	//play Animation Door
 	playProtalAnimation(){
 		//start Animation opeing portal
 		this.protal.play("startPortal", true);
-		
+
 		//wait until Animation completed
 		this.protal.on("animationcomplete", (animation, frame) => {
 			//start and loop Animation loop Protal
@@ -656,14 +664,14 @@ export default class Level extends Phaser.Scene {
 	playerVsEnemies(player, enemy) {
 
 		if ((player.y + player.body.height * 0.5 < enemy.y) && player.body.velocity.y > 0) {
-
+			this.sound.play("enemy-death");
 			enemy.destroy();
 			player.smashEnemy();
 			this.registry.set("enemyKilled",this.registry.get("enemyKilled") + 1 )
 
-
 		} else{
 			console.log("hurt");
+			this.sound.play("hurtSnd");
 			this.bunny.hurt();
 			this.playerHP.setText("Live Left : " + this.bunny.health);
 			if(this.bunny.health <= 0){
@@ -672,25 +680,27 @@ export default class Level extends Phaser.Scene {
 			}
 		}
 	}
-
 	collectedGenerator(bunny, generator) {
     	//console.log("HIT GENERETOR");
+		this.sound.play("star");
    		generator.disableBody();
     	generator.destroy();
     	this.canUseProtal = true;
     	this.playProtalAnimation(); 
 	}
-
 	loadNextScene(bunny,protal){ 
+		this.sound.play("doorSound");
 		this.cameras.main.fadeOut(1000);
+		this.registry.set("Tut", false);
 		protal.disableBody();
 		this.cameras.main.once("camerafadeoutcomplete", () => {
 			this.scene.start("Lv2");
 		});
 	}
-
 	collectedPowerUp(bunny, powerup){
 		powerup.disableBody();
+
+		this.sound.play("powerUp");
 		powerup.destroy();
 		bunny.setTint("0xff0000");
 		this.vel = this.vel * 1.5;
@@ -704,15 +714,12 @@ export default class Level extends Phaser.Scene {
 			loop : false
 		});
 	}
-
 	reloadScene(){
 		this.cameras.main.fadeOut(1000);
 		this.cameras.main.once("camerafadeoutcomplete", () => {
 			this.scene.restart();
 		});
 	}
-
-
 	/* END-USER-CODE */
 }
 
