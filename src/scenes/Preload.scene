@@ -9,30 +9,16 @@
             "starter-template-basic-typescript/assets/asset-pack.json"
         ],
         "createMethodName": "editorCreate",
-        "sceneKey": "Preload",
-        "borderWidth": 1280,
-        "borderHeight": 720
+        "sceneKey": "Preload"
     },
     "displayList": [
-        {
-            "type": "Image",
-            "id": "e413cbbf-ce25-4dad-a117-b7cf0791f655",
-            "label": "guapen",
-            "texture": {
-                "key": "guapen"
-            },
-            "x": 505.0120544433594,
-            "y": 360,
-            "scaleX": 0.32715486817515643,
-            "scaleY": 0.32715486817515643
-        },
         {
             "type": "Rectangle",
             "id": "845d4ca6-7417-44fc-97e3-a3bb2fbbdd03",
             "label": "progressBar",
             "scope": "CLASS",
-            "x": 553,
-            "y": 361,
+            "x": 292,
+            "y": 291,
             "originX": 0,
             "originY": 0,
             "isFilled": true,
@@ -44,8 +30,8 @@
             "type": "Rectangle",
             "id": "10e175a4-81b6-449e-9561-6d8ba54d3812",
             "label": "progressBarBg",
-            "x": 553.0120849609375,
-            "y": 361,
+            "x": 292,
+            "y": 291,
             "originX": 0,
             "originY": 0,
             "fillColor": "#e0e0e0",
@@ -57,8 +43,8 @@
             "type": "Text",
             "id": "c4092661-6339-47cf-9fea-8abff3a46e0c",
             "label": "loadingText",
-            "x": 552.0120849609375,
-            "y": 329,
+            "x": 291,
+            "y": 259,
             "text": "Loading...",
             "fontFamily": "arial",
             "fontSize": "20px",

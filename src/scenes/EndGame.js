@@ -191,6 +191,7 @@ export default class EndGame extends Phaser.Scene {
 		this.bgParallexControl();
 		this.floor.tilePositionX += 7;
 		if (this.enterKey.isDown) {
+			this.registry.set("CurrentTimer",0);
 			this.scene.start("TitleMenu");
 		}
 		if(this.oKey.isDown){
